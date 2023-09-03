@@ -57,3 +57,22 @@ body{
 }
 
 /* circle */
+.board.circle.cell1:not(.circle):not(.x).hover{
+    background: radial-gradient(var(--color) 60%, transparent 60%);
+}
+
+.cell1:not(.x).circle{
+    background: radial-gradient(var(--color-set) 60%, transparent 60%);
+}
+
+/* messages */
+.win-Message{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-set);
+    justify-content: ;
+}
