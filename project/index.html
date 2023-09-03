@@ -48,11 +48,11 @@
         reset.addEventListener('click',startGame);
         function startGame(){
             isPlayer0Turn=false;
-            cell.forEach(cell=>{
-                cell.classList.remove(player_x)
-                cell.classList.remove(player_0)
-                cell.removeEventListener('click',handleCellClick)
-                cell.addEventListener('click',handleCellClick,{once: true})
+            cell.forEach(cell1=>{
+                cell1.classList.remove(player_x)
+                cell1.classList.remove(player_0)
+                cell1.removeEventListener('click',handleCellClick)
+                cell1.addEventListener('click',handleCellClick,{once: true})
             })
         }
         setBoardHoverClass();
@@ -84,8 +84,16 @@
 
         function draw(){
             return [...cell].every(cell1 => {
-                
+                return cell1.classList.contains(player_x)||cell1.classList.contains(player_0);
             })
+        }
+
+        function placeMark(cell1,currentPlayer){
+            cell1.classList.add(currentPlayer);
+        }
+
+        function swapTurns() {
+            isPlayer0Turn=!isPlayer0Turn;
         }
 
 
