@@ -8,7 +8,7 @@
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
-    <div id="board">
+    <div class="board" id="board">
         <div class="btn" data-cell></div>
         <div class="btn" data-cell></div>
         <div class="btn" data-cell></div>
@@ -19,7 +19,7 @@
         <div class="btn" data-cell></div>
         <div class="btn" data-cell></div>
     </div>
-    <div id="winMessage">
+    <div class="win-Message" id="winMessage">
     <div id="winMessageText"></div>
     <button id="resetButton">Reset</button>
     </div>
@@ -42,7 +42,20 @@
         const winMessageElement=document.getElementById("winMessage");
         const winMessageTextElement=document.getElementById("winMessageText");
         const reset=document.getElementById("resetButton");
-        
+        let isPlayer0Turn=false;
+
+        startGame();
+        reset.addEventListener('click',startGame);
+        function startGame(){
+            isPlayer0Turn=false;
+            cell.forEach(cell=>{
+                cell.classList.remove(player_x)
+                cell.classList.remove(player_0)
+            })
+        }
+
+
+
     </script>
 </body>
 </html>
