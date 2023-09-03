@@ -65,8 +65,19 @@
             placeMark(cell1,currentPlayer);
             if (checkWin(currentPlayer)){
                 endgame(false)
-            } else if (draw())
+            } else if (draw()) {
+                endgame(true)
+            } else {
+                swapTurns();
+                setHoverClass();
+            }
         }
+
+        function endgame(isDraw){
+            if (isDraw)
+        }
+
+
 
     </script>
 </body>
