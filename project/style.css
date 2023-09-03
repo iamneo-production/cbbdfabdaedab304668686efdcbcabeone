@@ -74,5 +74,10 @@ body{
     right: 0;
     bottom: 0;
     background-color: var(--color-set);
-    justify-content: ;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    flex-direction: column;
 }

@@ -96,6 +96,14 @@
             isPlayer0Turn=!isPlayer0Turn;
         }
 
+        function checkWin(currentPlayer) {
+            return winner_comb.some(combination => {
+                return combination.every(index => {
+                    return cell[index].classList.contains(currentPlayer)
+                })
+            })
+        }
+
     </script>
 </body>
 </html>
