@@ -19,9 +19,9 @@
         <div class="btn" data-cell></div>
         <div class="btn" data-cell></div>
     </div>
-    <div class="Win Message">
-    <div class="winMessageText"></div>
-    <button id="restartButton">Reset</button>
+    <div id="winMessage">
+    <div id="winMessageText"></div>
+    <button id="resetButton">Reset</button>
     </div>
 
     <script>
@@ -39,6 +39,9 @@
         
         const cell=document.querySelectorAll('[data-cell]');
         const board=document.getElementById('board');
+        const winMessageElement=document.getElementById("winMessage");
+        const winMessageTextElement=document.getElementById("winMessageText");
+        const reset=document.getElementById("resetButton");
         
     </script>
 </body>
