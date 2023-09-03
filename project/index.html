@@ -51,10 +51,17 @@
             cell.forEach(cell=>{
                 cell.classList.remove(player_x)
                 cell.classList.remove(player_0)
+                cell.removeEventListener('click',handleCellClick)
+                cell.addEventListener('click',handleCellClick,{once: true})
             })
         }
+        setBoardHoverClass();
+        winMessageElement.classList.remove('show');
 
 
+        function handleCellClick(c){
+            const 
+        }
 
     </script>
 </body>
