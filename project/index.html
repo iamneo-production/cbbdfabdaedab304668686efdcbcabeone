@@ -60,7 +60,12 @@
 
 
         function handleCellClick(c){
-            const 
+            const cell1=c.target;
+            const currentPlayer=isPlayer0Turn? player_0 : player_x;
+            placeMark(cell1,currentPlayer);
+            if (checkWin(currentPlayer)){
+                endgame(false)
+            } else if (draw())
         }
 
     </script>
