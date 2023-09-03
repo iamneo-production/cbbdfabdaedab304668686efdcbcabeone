@@ -19,5 +19,28 @@ body{
     border: 1px solid black;
     display: flex;
     justify-content: center;
-    align-items: ;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+/* making the tale a tic-tac-toe board */
+.btn:nth-child(1), .btn:nth-child(2), .btn:nth-child(3){
+    border-top: none;
+}
+
+.btn:nth-child(1), .btn:nth-child(4), .btn:nth-child(7){
+    border-left: none;
+}
+
+.btn:nth-child(3), .btn:nth-child(6), .btn:nth-child(9){
+    border-right: none;
+}
+
+.btn:nth-child(7), .btn:nth-child(8), .btn:nth-child(9){
+    border-bottom: none;
+}
+
+.btn.x, .btn.circle{
+    cursor: not-allowed;
 }
