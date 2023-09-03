@@ -2,7 +2,7 @@ body{
     margin : 0;
 }
 
-.board{
+.board-container .board{
     width: 100px;
     height: 100px;
     display: grid;
@@ -13,7 +13,7 @@ body{
     grid-template-columns: repeat(3,auto);
 }
 
-.btn{
+.board__cell{
     width: var(--btn-size);
     height: var(--btn-size);;
     border: 1px solid black;
@@ -24,49 +24,9 @@ body{
     cursor: pointer;
 }
 
-/* making the tale a tic-tac-toe board */
-.btn:nth-child(1), .btn:nth-child(2), .btn:nth-child(3){
-    border-top: none;
-}
-
-.btn:nth-child(1), .btn:nth-child(4), .btn:nth-child(7){
-    border-left: none;
-}
-
-.btn:nth-child(3), .btn:nth-child(6), .btn:nth-child(9){
-    border-right: none;
-}
-
-.btn:nth-child(7), .btn:nth-child(8), .btn:nth-child(9){
-    border-bottom: none;
-}
-
-.btn.x, .btn.circle{
-    cursor: not-allowed;
-}
-
-/* cross sign */
-.board.x .btn:not(.circle):not(.x):hover{
-    background: linear-gradient(to top right, transparent calc( 50% - var(--1) / 2), var(--color)
-    calc(50% - var(--1)/2) calc(50%+var(--1)/2), transparent calc(50%+var(--1)/2)),
-    linear-gradient(to bottom right, transparent calc(50%-var(--1)/2), var(--color) calc(50%-var(--1)/2)
-    calc(50%+var(--1)/2),transparent calc(50%+var(--1)/2));
-    background-size: 80% 80%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* circle */
-.board.circle.cell1:not(.circle):not(.x).hover{
-    background: radial-gradient(var(--color) 60%, transparent 60%);
-}
-
-.cell1:not(.x).circle{
-    background: radial-gradient(var(--color-set) 60%, transparent 60%);
-}
 
 /* messages */
-.win-Message{
+#message{
     display: none;
     position: fixed;
     top: 0;
