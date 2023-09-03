@@ -74,7 +74,18 @@
         }
 
         function endgame(isDraw){
-            if (isDraw)
+            if (isDraw){
+                winMessageTextElement.innerText="Match is a draw";
+            } else {
+                winMessageTextElement.innerText=`Player with $(isPlayer0Turn? "0's" : "X's") win`
+            }
+            winMessageElement.classList.add('show');
+        }
+
+        function draw(){
+            return [...cell].every(cell1 => {
+                
+            })
         }
 
 
