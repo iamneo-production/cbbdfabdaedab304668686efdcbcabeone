@@ -14,8 +14,8 @@ body{
 }
 
 .btn{
-    width: var(--cell-size);
-    height: var(--cell-size);;
+    width: var(--btn-size);
+    height: var(--btn-size);;
     border: 1px solid black;
     display: flex;
     justify-content: center;
